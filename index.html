@@ -121,7 +121,7 @@ dialog input,dialog select,dialog textarea{width:100%}
   function lsGet(k){try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return[]}}
   function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
   function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
-  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function esc(s){return String(s==null?'':s).replace(/[&<>\"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function fmt(n){return Number(n).toLocaleString('id-ID',{maximumFractionDigits:2})}
   function status(it){return it.stok<=0?'habis':(it.stok<=it.min?'tipis':'ada')}
   var LBL={ada:'Ada',tipis:'Menipis',habis:'Tidak ada'};
